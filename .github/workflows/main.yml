@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Construir imagen Docker
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/app-hola-devops:latest .
+        run: docker buildx build --load -t ${{ secrets.DOCKER_USERNAME }}/app-hola-devops:latest .
 
       - name: Push imagen a DockerHub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/app-hola-devops:latest
