@@ -23,7 +23,6 @@ jobs:
       - name: Ejecutar pruebas
         run: npx --no-install jest
 
-
       - name: Login en DockerHub
         uses: docker/login-action@v2
         with:
