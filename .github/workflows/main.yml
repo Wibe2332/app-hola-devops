@@ -33,6 +33,7 @@ jobs:
         run: docker buildx build --load -t ${{ secrets.DOCKER_USERNAME }}/app-hola-devops:latest .
 
 
+
       - name: Push imagen a DockerHub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/app-hola-devops:latest .
 
